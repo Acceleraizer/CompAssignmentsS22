@@ -1,6 +1,17 @@
 import random
 
+from urllib3 import Retry
+
 def random_ints():
+    ls = []
+    x = random.randint(1,6)
+    while True:
+        ls += [x]
+        if x == 6:
+            break
+        else:
+            x = random.randint(1,10)
+    return ls
     # Your code here!
 
 
