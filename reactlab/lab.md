@@ -53,6 +53,13 @@ In another, run `npm start` in the `crimsonbouquet/frontend`. In the third, you 
 # Actual React
 
 I'm up at 3 am and have to get up at 7:30. Sad reacts only.
+
+## What's going on here
+
+The point of entry here is `index.js`. If we look inside, we see that it does some setup and then calls `App`, which is imported from `App.tsx`. `App.tsx` then has a Router that displays an appropriate component given the url, which is discussed in a little bit.
+
+Head to `localhost:3000`. You see `i am the main page now`, which corresponds to the text in the `MainPage` component we just talked about. Why is this one being displayed? Because of the Router.
+
 ## Components
 
 Glorified HTML. They are essentially HTML elements that are equipped with Javascript. A basic one is the current `MainPage` component:
@@ -70,12 +77,6 @@ const MainPage = function() {
 It returns a JSX element - an actual HTML element. However, we'll see moving forward that can do much more. Any functional component must return an appropriate JSX element, so React can render it (put it up for you to see).
 
 This is an example of a functional component. There are also class components, and many cool features that these things have, none of which we will discuss today, but you're free to read about them online.
-
-## What's going on here
-
-The point of entry here is `index.js`. If we look inside, we see that it does some setup and then calls `App`, which is imported from `App.tsx`. `App.tsx` then has a Router that displays an appropriate component given the url, which is discussed in a little bit.
-
-Head to `localhost:3000`. You see `i am the main page now`, which corresponds to the text in the `MainPage` component we just talked about. Why is this one being displayed? Because of the Router.
 
 ### Router Component
 
